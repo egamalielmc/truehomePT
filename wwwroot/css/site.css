@@ -16,3 +16,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.derecha{
+    text-align: right;
+}
+
+.izquierda{
+    text-align: left;
+}
+
+.centro{
+    text-align: center;
+}

@@ -1,0 +1,86 @@
+﻿@page
+@model TrueHomePT.Pages.AgregarModel
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Agregar</h1>
+    <p>En este apartado puede agregar una nueva propiedad o una nueva actividad.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Nueva actividad.</h3>
+    </div>
+
+    <div class="col-lg-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Fecha de la actividad</th>
+                    <th>Título</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="lista_propiedad">
+                            <option value="">- Seleccione -</option>
+                        </select>
+                    </td>
+                    <td><input type="date" id="fecha"></td>
+                    <td><input type="text" id="titulo_actividad" /></td>
+                    <td>
+                        <select id="estatus_actividad">
+                            <option value="">- Seleccione -</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                            <option value="Realizado">Realizado</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-12 derecha">
+        <button class="btn btn-primary">Guardar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>Nueva propiedad.</h3>
+    </div>
+    <div class="col-lg-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre propiedad</th>
+                    <th>Dirección</th>
+                    <th>Descripción</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="titulo_propiedad" maxlength="255" /></td>
+                    <td><input type="text" id="direccion" /></td>
+                    <td><textarea id="descripcion"></textarea></td>
+                    <td>
+                        <select id="estatus_propiedad">
+                            <option value="">- Seleccione -</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-12 derecha">
+        <button class="btn btn-primary">Guardar</button>
+    </div>
+</div>

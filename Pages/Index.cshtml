@@ -4,6 +4,11 @@
     ViewData["Title"] = "Inicio";
 }
 
+<head>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/inicio.js" asp-append-version="true"></script>
+</head>
+
 <div class="text-center">
     <h1 class="display-4">Bienvenido</h1>
     <p>En este apartado se encuentra la lista de actividades.</p>
@@ -19,9 +24,60 @@
                     <th>Fecha Ceración</th>
                     <th>Estatus</th>
                     <th>Condición</th>
+                    <th>Propiedad</th>
+                    <th>Dirección</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="tabla_lista"></tbody>
         </table>
+    </div>
+</div>
+
+
+<!-- DETALLES -->
+<div id="detalles" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="titulo-modal-detalles"></h2>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <tbody id="detalle-1">
+                    <tr>
+                        <td colspan="2"><b>Fecha agendada:</b></td>
+                        <td><input type="date" id="mfecha_agendada" class="form-control" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="text" id="mtitulo" class="form-control" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mtitulo_propiedad" disabled /></td>
+                        <td></td>
+                        <td><textarea class="form-control" id="mdireccion" disabled ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" id="mfecha_creacion" class="form-control" disabled /></td>
+                        <td></td>
+                        <td>
+                            <select id="mestatus" class="form-control">
+                                <option value="">- Seleccione -</option>
+                                <option value="Activo">Activo</option>
+                                <option value="Done">Done</option>
+                                <option value="Cancelado">Cancelado</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <div class="centro" id="boton">
+                <input type="button" class="btn btn-primary" onclick="guardar_registro('inventario', 'edicion')" value="Guardar cambios" />
+            </div>
+        </div>
     </div>
 </div>

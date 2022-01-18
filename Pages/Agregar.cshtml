@@ -4,6 +4,11 @@
     ViewData["Title"] = "Agregar";
 }
 
+<head>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/agregar.js" asp-append-version="true"></script>
+</head>
+
 <div class="text-center">
     <h1 class="display-4">Agregar</h1>
     <p>En este apartado puede agregar una nueva propiedad o una nueva actividad.</p>
@@ -46,7 +51,7 @@
         </table>
     </div>
     <div class="col-lg-12 derecha">
-        <button class="btn btn-primary">Guardar</button>
+        <button class="btn btn-primary" onclick="guarda_actividad()">Guardar</button>
     </div>
 </div>
 
@@ -81,6 +86,6 @@
         </table>
     </div>
     <div class="col-lg-12 derecha">
-        <button class="btn btn-primary">Guardar</button>
+        <button class="btn btn-primary" onclick="guarda_propiedad()">Guardar</button>
     </div>
 </div>

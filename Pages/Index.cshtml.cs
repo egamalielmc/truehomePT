@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Npgsql;
 
 namespace TrueHomePT.Pages
 {
@@ -9,6 +10,10 @@ namespace TrueHomePT.Pages
 
         public IndexModel(ILogger<IndexModel> logger)
         {
+            //Propiedades pp = new Propiedades();
+
+            //Console.WriteLine(pp.GetPropiedades());
+
             _logger = logger;
         }
 
